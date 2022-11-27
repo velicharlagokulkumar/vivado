@@ -1,0 +1,7 @@
+Running: xsim.dir/downcounter_testbench_time_synth/xsimk.exe -simmode gui -wdb downcounter_testbench_time_synth.wdb -simrunnum 0 -socket 51521
+Design successfully loaded
+Design Loading Memory Usage: 8020 KB (Peak: 8020 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 8776 KB (Peak: 8776 KB)
+Simulation CPU Usage: 78 ms

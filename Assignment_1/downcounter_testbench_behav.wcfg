@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="downcounter_testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="downcounter_testbench" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="488.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="251"></NameColumnWidth>
+      <ValueColumnWidth column_width="121"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/downcounter_testbench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/downcounter_testbench/latch" type="logic">
+      <obj_property name="ElementShortName">latch</obj_property>
+      <obj_property name="ObjectShortName">latch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/downcounter_testbench/dec" type="logic">
+      <obj_property name="ElementShortName">dec</obj_property>
+      <obj_property name="ObjectShortName">dec</obj_property>
+   </wvobject>
+   <wvobject fp_name="/downcounter_testbench/divide_by_two" type="logic">
+      <obj_property name="ElementShortName">divide_by_two</obj_property>
+      <obj_property name="ObjectShortName">divide_by_two</obj_property>
+   </wvobject>
+   <wvobject fp_name="/downcounter_testbench/COUNT_IN" type="array">
+      <obj_property name="ElementShortName">COUNT_IN[7:0]</obj_property>
+      <obj_property name="ObjectShortName">COUNT_IN[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/downcounter_testbench/counter" type="array">
+      <obj_property name="ElementShortName">counter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/downcounter_testbench/zero_flag" type="logic">
+      <obj_property name="ElementShortName">zero_flag</obj_property>
+      <obj_property name="ObjectShortName">zero_flag</obj_property>
+   </wvobject>
+</wave_config>

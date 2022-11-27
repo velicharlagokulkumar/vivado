@@ -1946,3 +1946,5 @@ typeControlKey((HResource) null, "down_counter_tb.v", 'c'); // ac
 // Elapsed time: 99 seconds
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "down_counter.v", 1); // o
 selectCodeEditor("down_counter.v", 548, 353); // ac
+// Elapsed time: 419 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 3); // o

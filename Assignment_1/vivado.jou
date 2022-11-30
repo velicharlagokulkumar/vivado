@@ -49,3 +49,4 @@ close_sim
 launch_simulation
 open_wave_config C:/Users/velic/OneDrive/Desktop/vivado/Assignment_1/downcounter_testbench_behav.wcfg
 source downcounter_testbench.tcl
+close_sim

@@ -1,0 +1,9 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/velic/project_16/project_16.srcs/sim_1/new/custom_pattern_tb.v,1705039038,verilog,,,,custom_pattern_tb,,,,,,,,
+C:/Users/velic/project_16/project_16.srcs/sources_1/new/custom_pattern.v,1705038032,verilog,,C:/Users/velic/project_16/project_16.srcs/sources_1/new/test2.v,,mtm_custom_pattern_generator,,,,,,,,
+C:/Users/velic/project_16/project_16.srcs/sources_1/new/test2.v,1704780277,verilog,,C:/Users/velic/project_16/project_16.srcs/sim_1/new/custom_pattern_tb.v,,counter,,,,,,,,
+C:/Users/velic/project_17/project_17.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,1705038157,verilog,,C:/Users/velic/project_16/project_16.srcs/sources_1/new/custom_pattern.v,,blk_mem_gen_0,,,,,,,,
+C:/Users/velic/project_17/project_17.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,

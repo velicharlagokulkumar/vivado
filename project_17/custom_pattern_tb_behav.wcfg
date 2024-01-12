@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="custom_pattern_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="custom_pattern_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="114.801 ns"></ZoomEndTime>
+      <Cursor1Time time="133.060 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="262"></NameColumnWidth>
+      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="34" />
+   <wvobject fp_name="/custom_pattern_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/csr_address" type="array">
+      <obj_property name="ElementShortName">csr_address[1:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_address[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/csr_writedata" type="array">
+      <obj_property name="ElementShortName">csr_writedata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_writedata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/csr_write" type="logic">
+      <obj_property name="ElementShortName">csr_write</obj_property>
+      <obj_property name="ObjectShortName">csr_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/csr_readdata" type="array">
+      <obj_property name="ElementShortName">csr_readdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_readdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/csr_read" type="logic">
+      <obj_property name="ElementShortName">csr_read</obj_property>
+      <obj_property name="ObjectShortName">csr_read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/csr_byteenable" type="array">
+      <obj_property name="ElementShortName">csr_byteenable[3:0]</obj_property>
+      <obj_property name="ObjectShortName">csr_byteenable[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/pattern_address" type="array">
+      <obj_property name="ElementShortName">pattern_address[5:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_address[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/pattern_writedata" type="array">
+      <obj_property name="ElementShortName">pattern_writedata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_writedata[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/pattern_write" type="logic">
+      <obj_property name="ElementShortName">pattern_write</obj_property>
+      <obj_property name="ObjectShortName">pattern_write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/pattern_byteenable" type="array">
+      <obj_property name="ElementShortName">pattern_byteenable[3:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_byteenable[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/src_data" type="array">
+      <obj_property name="ElementShortName">src_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">src_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/src_valid" type="logic">
+      <obj_property name="ElementShortName">src_valid</obj_property>
+      <obj_property name="ObjectShortName">src_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/src_ready" type="logic">
+      <obj_property name="ElementShortName">src_ready</obj_property>
+      <obj_property name="ObjectShortName">src_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/count" type="array">
+      <obj_property name="ElementShortName">count[31:0]</obj_property>
+      <obj_property name="ObjectShortName">count[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/c_reset" type="logic">
+      <obj_property name="ElementShortName">c_reset</obj_property>
+      <obj_property name="ObjectShortName">c_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/DATA_WIDTH" type="array">
+      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/MAX_PATTERN_LENGTH" type="array">
+      <obj_property name="ElementShortName">MAX_PATTERN_LENGTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MAX_PATTERN_LENGTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/ADDRESS_WIDTH" type="array">
+      <obj_property name="ElementShortName">ADDRESS_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDRESS_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/NUM_OF_SYMBOLS" type="array">
+      <obj_property name="ElementShortName">NUM_OF_SYMBOLS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_OF_SYMBOLS[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/read_memory" type="logic">
+      <obj_property name="ElementShortName">read_memory</obj_property>
+      <obj_property name="ObjectShortName">read_memory</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/read_memory_d1" type="logic">
+      <obj_property name="ElementShortName">read_memory_d1</obj_property>
+      <obj_property name="ObjectShortName">read_memory_d1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/read_memory_d2" type="logic">
+      <obj_property name="ElementShortName">read_memory_d2</obj_property>
+      <obj_property name="ObjectShortName">read_memory_d2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/read_memory_d3" type="logic">
+      <obj_property name="ElementShortName">read_memory_d3</obj_property>
+      <obj_property name="ObjectShortName">read_memory_d3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/memory_data_d1" type="array">
+      <obj_property name="ElementShortName">memory_data_d1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">memory_data_d1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/load_start" type="logic">
+      <obj_property name="ElementShortName">load_start</obj_property>
+      <obj_property name="ObjectShortName">load_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/clear_start" type="logic">
+      <obj_property name="ElementShortName">clear_start</obj_property>
+      <obj_property name="ObjectShortName">clear_start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/payload_length_counter" type="array">
+      <obj_property name="ElementShortName">payload_length_counter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">payload_length_counter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/pattern_length" type="array">
+      <obj_property name="ElementShortName">pattern_length[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_length[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/pattern_position_counter" type="array">
+      <obj_property name="ElementShortName">pattern_position_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">pattern_position_counter[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/internal_memory_address" type="array">
+      <obj_property name="ElementShortName">internal_memory_address[5:0]</obj_property>
+      <obj_property name="ObjectShortName">internal_memory_address[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/custom_pattern_tb/in89/memory_data" type="array">
+      <obj_property name="ElementShortName">memory_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">memory_data[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module test2_tb(
+module counter_tb(
     );
     
     reg counter_clk;

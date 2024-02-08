@@ -6,5 +6,6 @@ sel:0
 sel1:
 
 ![image](https://github.com/velicharlagokulkumar/vivado/assets/104726431/0b2fcac2-86e6-49a2-8dce-bee744ce2895)
-![Uploading image.png…]()
+![image](https://github.com/velicharlagokulkumar/vivado/assets/104726431/0783701b-120b-465e-a696-a1d89c895d4b)
+
 

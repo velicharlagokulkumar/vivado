@@ -8,52 +8,57 @@ module fifo_top #(
   input  logic                 clk,
   input  logic                 reset,
   
-  input  logic                 writeReq,
+  //input  logic                 writeReq,
   
   input  logic [DataWidth-1:0] writeData,
   input  logic                 writeDataValid,
   output logic                 writeDataReady,
   input  logic                 writeDataLast,
    
-  input  logic                 readReq,
+  //input  logic                 readReq,
   
   output logic [DataWidth-1:0] readData,
   output logic                 readDataValid,
   input  logic                 readDataReady,
-  output logic                 readDataLast,
+  output logic                 readDataLast
   
-  output logic                 full,
-  output logic                 empty
+  //output logic                 full,
+  //output logic                 empty
 );
 
-logic write_to_fifo_2;
-logic read_from_fifo_2;
+//logic write_to_fifo_2;
+//logic read_from_fifo_2;
+//logic write_to_fifo_1;
+//logic read_from_fifo_1;
 
-logic write_to_fifo_1;
-logic read_from_fifo_1;
+logic [DataWidth-1:0] readData_1;
+logic readDataValid_1;
+logic readDataReady_1;
+logic readDataLast_1;
+
 
  fifo_2048 fifo1(
   .clk(clk),
   .reset(reset),
   
-  .writeReq(writeReq_1),
+  //.writeReq(writeReq_1),
   
-  .writeData(writeData_1),
-  .writeDataValid(writeDataValid_1),
-  .writeDataReady(writeDataReady_1),
-  .writeDataLast(writeDataLast_1),
+  .writeData(writeData),
+  .writeDataValid(writeDataValid),
+  .writeDataReady(writeDataReady),
+  .writeDataLast(writeDataLast),
    
-  .readReq(readReq_1),
+  //.readReq(readReq_1),
   
   .readData(readData_1),
   .readDataValid(readDataValid_1),
   .readDataReady(readDataReady_1),
-  .readDataLast(readDataLast_1),
+  .readDataLast(readDataLast_1)
   
-  .full(full_1),
-  .empty(empty_1),
-  .abt_full(abt_full_1),
-  .abt_empty(abt_empty_1)
+  //.full(full_1),
+  //.empty(empty_1),
+  //.abt_full(abt_full_1),
+  //.abt_empty(abt_empty_1)
 );
 
 fifo_2048 fifo2(
@@ -61,28 +66,28 @@ fifo_2048 fifo2(
   .clk(clk),
   .reset(reset),
   
-  .writeReq(writeReq_2),
+  //.writeReq(writeReq_2),
   
-  .writeData(writeData_2),
-  .writeDataValid(writeDataValid_2),
-  .writeDataReady(writeDataReady_2),
-  .writeDataLast(writeDataLast_2),
+  .writeData(readData_1),
+  .writeDataValid(readDataValid_1),
+  .writeDataReady(readDataReady_1),
+  .writeDataLast(readDataLast_1),
    
-  .readReq(readReq_2),
+  //.readReq(readReq_2),
   
-  .readData(readData_2),
-  .readDataValid(readDataValid_2),
-  .readDataReady(readDataReady_2),
-  .readDataLast(readDataLast_2),
+  .readData(readData),
+  .readDataValid(readDataValid),
+  .readDataReady(readDataReady),
+  .readDataLast(readDataLast)
   
-  .full(full_2),
-  .empty(empty_2),
+  //.full(full_2),
+  //.empty(empty_2),
   
-  .abt_full(abt_full_2),
-  .abt_empty(abt_empty_2)
+  //.abt_full(abt_full_2),
+  //.abt_empty(abt_empty_2)
 );
 
-
+  /*
  always@(posedge clk or posedge reset)
  begin
    if (reset)
@@ -110,7 +115,7 @@ always@(posedge clk or posedge reset)
             else
             read_from_fifo_2 <= 1'b0;  
     end
-  /*  
+  
 always@(posedge clk or posedge reset)
  begin
    if (reset)
@@ -120,7 +125,7 @@ always@(posedge clk or posedge reset)
             else
             read_from_fifo_1 <= 1'b0;  
     end
-   */
+ 
 assign writeReq_1 =  !write_to_fifo_2 | write_to_fifo_1 ? writeReq : 1'b0;
 assign writeReq_2 =  write_to_fifo_2 | !write_to_fifo_1 ? writeReq : 1'b0;
 
@@ -153,4 +158,5 @@ assign fifo_2_full =  (fifo2.abt_full == 1);
 assign fifo_2_empty =  (fifo2.empty == 1);
 assign both_empty = fifo1.empty & fifo2.empty;
    
+     */
 endmodule

@@ -6,27 +6,26 @@ module fifo_2048 #(
   input  logic                 clk,
   input  logic                 reset,
   
-  input  logic                 writeReq,
+  //input  logic                 writeReq,
   
   input  logic [DataWidth-1:0] writeData,
   input  logic                 writeDataValid,
   output logic                 writeDataReady,
   input  logic                 writeDataLast,
   
-  
-  input  logic                 readReq,
+ //input  logic                 readReq,
   
   output logic [DataWidth-1:0] readData,
   output logic                 readDataValid,
   input  logic                 readDataReady,
-  output logic                 readDataLast,
+  output logic                 readDataLast
   
-  
+  /*
   output logic                 full,
   output logic                 empty,
   output logic                 abt_full,
   output logic                 abt_empty
-
+*/
 );
 
   logic [DataWidth-1:0] mem[Depth];
@@ -43,7 +42,7 @@ module fifo_2048 #(
   logic empty_r;
   logic empty_w;
 
-  logic [PtrWidth-1:0] t_last_reg [Depth/2:0];
+  logic [PtrWidth:0] t_last_reg [Depth/2-1:0];
   
   logic [PtrWidth-1:0] tlast_count_write;
   logic [PtrWidth-1:0] tlast_count_next_write;
@@ -56,7 +55,18 @@ module fifo_2048 #(
     if (reset == 1) begin
       wrPtr <= '0;
       rdPtr <= '0;
-    end else begin
+    end 
+    /*else if(!full & (rdPtr == {{PtrWidth-1{1'b0}},1'b1,1'b0})) begin
+     wrPtr <= '0;
+     rdPtr <= rdPtrNext;
+     end
+     
+     else if(!empty &(rdPtr == {1'b1,{PtrWidth{1'b0}}})) begin
+      rdPtr <= '0;
+       wrPtr <= wrPtrNext;
+       end
+    */
+     else begin
       wrPtr <= wrPtrNext;
       rdPtr <= rdPtrNext;
     end
@@ -65,22 +75,22 @@ module fifo_2048 #(
     always_comb begin
     wrPtrNext = wrPtr;
     rdPtrNext = rdPtr;
-    if( writeReq & writeDataValid & wrPtr <= {1'b0,{PtrWidth{1'b1}}}) begin
+    if (enable) begin //& wrPtr <= {1'b0,{PtrWidth{1'b1}}}
       wrPtrNext = wrPtr + 1;
     end
-    if (readReq & readDataReady & rdPtr <= {1'b0,{PtrWidth{1'b1}}}) begin
+    if (enable2) begin //& rdPtr <= {1'b0,{PtrWidth{1'b1}}}
       rdPtrNext = rdPtr + 1;
     end
   end
   
     
     always_ff @(posedge clk) begin
-        if (writeReq & enable)
+        if (enable)
         mem[wrPtr[PtrWidth-1:0]] <= writeData; //mem[wrPtr][PtrWidth-1:0]
     end  
     
      always_ff @(posedge clk) begin
-        if (readReq & enable2) 
+        if (enable2) 
         readData <= mem[rdPtr[PtrWidth-1:0]];
     end 
     
@@ -90,7 +100,7 @@ module fifo_2048 #(
     begin
       valid_out <= 0;
     end
-      else if ( readReq )
+      else if ( enable2 )
       begin
         valid_out <= enable2;
       end
@@ -148,7 +158,7 @@ module fifo_2048 #(
   begin
   if(reset)
    out_tlast <= 1'b0;
-    else if (readReq == 1) 
+    else if (enable2 == 1) 
       begin
        if(rdPtr == t_last_reg[tlast_count_read])
           begin
@@ -183,7 +193,7 @@ module fifo_2048 #(
   
   assign readDataValid = valid_out;
   
-  assign  t_last = writeReq & writeDataValid & writeDataLast;
+  assign  t_last =  writeDataValid & writeDataLast;
   assign  readDataLast = out_tlast;
   
   assign full = full_r;
@@ -192,7 +202,7 @@ module fifo_2048 #(
   assign empty_w = (wrPtr[PtrWidth] == rdPtr[PtrWidth]) && (wrPtr[PtrWidth-1:0] == rdPtr[PtrWidth-1:0]);
   assign full_w  = (wrPtr[PtrWidth] != rdPtr[PtrWidth]) && (wrPtr[PtrWidth-1:0] == rdPtr[PtrWidth-1:0]);
 
-  assign abt_full = full_w;
-  assign abt_empty = empty_w;
+  //assign abt_full = full_w;
+  //assign abt_empty = empty_w;
   
 endmodule

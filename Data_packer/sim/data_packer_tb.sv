@@ -6,7 +6,7 @@ module data_packer_tb(
   
       logic                     clk;
       logic                     reset;
-      logic [1:0]               k; 
+      logic [15:0]              confi; 
 
       logic [DATA_WIDTH-1:0]    s_axis_tdata;
       logic                     s_axis_tvalid;
@@ -22,7 +22,7 @@ module data_packer_tb(
  data_packer packer_inst(
         .clk(clk),
         .reset(reset),
-        .k(k),
+        .confi(confi),
         
         .s_axis_tdata(s_axis_tdata),
         .s_axis_tvalid(s_axis_tvalid),
@@ -41,7 +41,7 @@ module data_packer_tb(
   ) in568(
  .counter_clk(clk),
  .reset(reset),
- .count_up_to(32'd19),
+ .count_up_to(32'd16),
 
  .count_up(s_axis_tdata),
  .count_valid(s_axis_tvalid),
@@ -52,19 +52,11 @@ module data_packer_tb(
   initial begin
     clk = 0;
     reset = 1;
-    s_axis_tready=1'b0;
-    k = 1;  
-    #10 reset = 0;
-    #100 s_axis_tready=1'b1;
+    m_axis_tready=1'b1;
+    confi = 16'h0410;
+        #10 reset = 0;
   end
   
-  always @(posedge clk)
-   begin
-  if(s_axis_tlast == 1'b1)
-  begin
-  k=k+1;
-  end
-  end
 
 always #5 clk=~clk;
     

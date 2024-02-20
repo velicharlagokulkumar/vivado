@@ -19,6 +19,7 @@ module fifo_top_tb(
         logic                 readDataValid;
         logic                   readDataReady;
         logic                 readDataLast;
+        logic                 disable_counter;
         
         //logic                 full;
         //logic                 empty;
@@ -57,7 +58,7 @@ counter_up #(
 
  .count_up(writeData),
  .count_valid(writeDataValid),
- .count_ready(writeDataReady),
+ .count_ready(writeDataReady & disable_counter),
  .count_last(writeDataLast) 
  );
     
@@ -66,6 +67,7 @@ counter_up #(
     reset = 1;
     //writeReq = 0;
     //readReq = 0;
+    disable_counter=1'b1;
     readDataReady=0;
     #10 reset = 0;
     //#30 writeReq = 1;
@@ -73,6 +75,7 @@ counter_up #(
     // #1000 readReq = 1;
      //#300 readDataReady=1;
      #60000 readDataReady=1'b1;
+     #60000 disable_counter=1'b0;
       //#200 readDataReady=1'b0;
      end
 

@@ -70,7 +70,7 @@ module data_packer (
              
         .writeData(s_axis_tdata),
         .writeDataValid(s_axis_tvalid),
-        .writeDataReady(s_axis_tready),
+        .writeDataReady(s_axis_tready_f),
         .writeDataLast(s_axis_tlast),
              
         .readData(readData),
@@ -183,7 +183,7 @@ module data_packer (
     assign ready = (valid_out == 0) | ((m_axis_tready == 1) & (valid_out == 1));
     assign enable = ((ready == 1) & (s_axis_tvalid == 1));
     
-    assign s_axis_tready = (ready == 1);
+    assign s_axis_tready = (ready == 1) & s_axis_tready_f;
      
     assign m_axis_tvalid = s_axis_tvalid;
     endmodule

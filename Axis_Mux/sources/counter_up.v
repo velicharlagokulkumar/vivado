@@ -1,14 +1,17 @@
 `timescale 1ns / 1ps
-module counter_up(
-input counter_clk,
-input reset,
-input [4:0] count_up_to,
-
-output [31:0] count_up,
-output count_valid,
-input count_ready,
-output count_last 
-    );
+module counter_up
+#(
+  parameter DataWidth = 32
+) (
+    input counter_clk,
+    input reset,
+    input [DataWidth-1:0] count_up_to,
+    
+    output [DataWidth-1:0] count_up,
+    output count_valid,
+    input count_ready,
+    output count_last 
+ );
     
     
     reg [31:0] count_reg=0;
@@ -20,7 +23,7 @@ output count_last
     begin
     if(reset==1'b1|count_reached==1'b1)
     count_reg<=0;
-    else if(count_ready)
+    else if(ready)
     count_reg<=count_next;
     end
     
@@ -31,7 +34,7 @@ output count_last
       valid_out <= 0;
     end
     else if(ready)
-       valid_out = 1;    
+       valid_out = 1'b1;    
     end
     
   always @ (posedge counter_clk or posedge reset)

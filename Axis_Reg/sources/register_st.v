@@ -32,6 +32,7 @@ module register_st (
     output wire                     m_axis_tlast; 
 
       reg valid_out;
+      reg valid_output;
       
       wire ready;
       wire enable;
@@ -47,7 +48,7 @@ module register_st (
         begin
           reg_data <= 0;
         end
-        else if (enable == 1) 
+        else if (valid_output == 1) 
         begin
           reg_data <=  s_axis_tdata;
         end
@@ -63,6 +64,20 @@ module register_st (
       begin
         valid_out <= enable;
       end
+   end
+   
+     always @ (posedge clk or posedge reset)
+  begin
+    if (reset == 1)
+    begin
+      valid_output <= 0;
+    end
+      else if (ready == 1)
+      begin
+        valid_output <= enable;
+      end
+      else 
+        valid_output <= 0;
    end
 
   always @ (posedge clk or posedge reset)

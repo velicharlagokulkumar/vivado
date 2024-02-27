@@ -11,7 +11,7 @@ module counter_up_tb(
     reg [31:0] count_up_to;
     wire count_last;
     
- counter_up in_up(
+ streamer_up in_down(
     .counter_clk(clk),
     .reset(reset),
     .count_up_to(count_up_to),
@@ -26,10 +26,11 @@ module counter_up_tb(
     begin
     clk=0;
     reset=1;
-    //count_up_to=32'hFFFFFFeb;
     count_up_to=20;
     #6 reset=0;
-    #50 count_ready=1;
+    #80 count_ready=1;
+     #480 count_ready=0;
+     #20 count_ready=1;
     end
     
     always #5 clk=~clk;

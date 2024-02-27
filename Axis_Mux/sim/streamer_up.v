@@ -1,14 +1,18 @@
 `timescale 1ns / 1ps
-module counter_down(
-input counter_clk,
-input reset,
-input [31:0] count_up_to,
-
-output [31:0] count_down,
-output count_valid,
-input count_ready,
-output count_last 
-    );
+module streamer_up
+#(
+  parameter DataWidth = 32
+) (
+    input counter_clk,
+    input reset,
+    input [DataWidth-1:0] count_up_to,
+    
+    output [DataWidth-1:0] count_up,
+    output count_valid,
+    input count_ready,
+    output count_last 
+ );
+    
     
     reg [31:0] count_reg=0;
     reg [31:0] count_next=0;
@@ -18,19 +22,19 @@ output count_last
     always@(posedge counter_clk)
     begin
     if(reset==1'b1|count_reached==1'b1)
-    count_reg<=32'hFFFFFFFF;
-    else if(count_ready)
+    count_reg<=0;
+    else if(enable)
     count_reg<=count_next;
     end
     
    always @ (posedge counter_clk or posedge reset)
-  begin
+    begin
     if (reset == 1)
     begin
       valid_out <= 0;
     end
     else if(ready)
-       valid_out = 1;    
+       valid_out = 1'b1;    
     end
     
   always @ (posedge counter_clk or posedge reset)
@@ -47,12 +51,15 @@ output count_last
     
     
     always@(*)
-    count_next=count_reg-1;
+    count_next=count_reg+1;
     
     
     assign count_reached=(count_reg==count_up_to);
-    assign ready = (count_ready == 1);
-    assign count_down = count_reg;
+    
+    assign ready = (valid_out==0) | (valid_out==1);
+    assign enable = (ready == 1) & (count_ready == 1);
+    
+    assign count_up = count_reg;
     assign count_valid = valid_out;
     assign count_last=last;
  

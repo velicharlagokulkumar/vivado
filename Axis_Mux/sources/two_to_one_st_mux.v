@@ -4,7 +4,9 @@
 
 `timescale 1ns / 1ps
 
-module two_to_one_st_mux (
+module two_to_one_st_mux #(
+  parameter  DATA_WIDTH = 32
+)(
         clk,
         reset,
         
@@ -25,8 +27,6 @@ module two_to_one_st_mux (
         m_axis_tready,
         m_axis_tlast 
 );
-
-    parameter DATA_WIDTH = 32;
   
     input  wire                     clk;
     input  wire                     reset;
@@ -77,7 +77,7 @@ module two_to_one_st_mux (
     begin
       data_out <= 0;
     end
-    else if (valid_output == 1) 
+    else if (enable == 1) 
     begin
       data_out <= (input_select == 0)? s_axis_tdata_A : s_axis_tdata_B;
     end

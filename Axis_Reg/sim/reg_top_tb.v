@@ -22,7 +22,7 @@ module reg_top_tb(
   
 register_st #(
         .DATA_WIDTH(DATA_WIDTH)
-   ) inst_Reg(      
+   ) inst_Reg(
         .clk(clock),
         .reset(reset),
         
@@ -115,7 +115,7 @@ endtask
    while (1)
     begin
      @(posedge clock)
-       if(s_axis_tready & !(count == pak_len))
+       if(s_axis_tready)
        begin
        s_axis_tvalid  <= 1;
 	   s_axis_tdata <= $random;

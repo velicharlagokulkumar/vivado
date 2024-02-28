@@ -1,6 +1,8 @@
 `timescale 1ns / 1ps
 
-module register_st (
+module register_st #(
+  parameter  DATA_WIDTH = 8
+)(
         clk,
         reset,
         
@@ -14,8 +16,6 @@ module register_st (
         m_axis_tready,
         m_axis_tlast 
 );
-
-    parameter DATA_WIDTH = 32;
   
     input  wire                     clk;
     input  wire                     reset; 
@@ -32,14 +32,18 @@ module register_st (
     output wire                     m_axis_tlast; 
 
       reg valid_out;
-      reg valid_output;
+      reg ready_r;
+      reg s_axis_tvalid_r;
+      reg m_axis_tvalid_r;
       
       wire ready;
       wire enable;
       wire t_last;
       reg out_tlast;
+      reg enable_r;
     
       reg [DATA_WIDTH-1:0] reg_data;
+      reg m_axis_tready_r;
     
     
       always @ (posedge clk or posedge reset)
@@ -48,7 +52,7 @@ module register_st (
         begin
           reg_data <= 0;
         end
-        else if (valid_output == 1) 
+        else if (enable == 1) 
         begin
           reg_data <=  s_axis_tdata;
         end
@@ -66,19 +70,6 @@ module register_st (
       end
    end
    
-     always @ (posedge clk or posedge reset)
-  begin
-    if (reset == 1)
-    begin
-      valid_output <= 0;
-    end
-      else if (ready == 1)
-      begin
-        valid_output <= enable;
-      end
-      else 
-        valid_output <= 0;
-   end
 
   always @ (posedge clk or posedge reset)
   begin
@@ -93,12 +84,12 @@ module register_st (
    end
 
 
-
   assign ready = (valid_out == 0) | ((m_axis_tready == 1) & (valid_out == 1));
   assign enable = ((ready == 1) & (s_axis_tvalid == 1));
+  
 
   assign t_last = (s_axis_tlast==1);
-  assign s_axis_tready= (ready == 1);
+  assign s_axis_tready= (ready) & !(reset);
  
   assign m_axis_tdata = reg_data;
   assign m_axis_tvalid = valid_out;

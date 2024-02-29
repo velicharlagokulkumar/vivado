@@ -42,7 +42,7 @@ module fifo_2048 #(
   logic empty_r;
   logic empty_w;
 
-  logic [PtrWidth:0] t_last_reg [Depth/2-1:0];
+  logic [PtrWidth:0] t_last_reg [Depth-1:0];
   
   logic [PtrWidth-1:0] tlast_count_write;
   logic [PtrWidth-1:0] tlast_count_next_write;

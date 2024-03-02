@@ -27,7 +27,7 @@ module data_packer (
     input  logic                     s_axis_tlast;
 
 
-    output logic [DATA_WIDTH-1:0]    m_axis_tdata;
+    output logic [DATA_WIDTH:0]    m_axis_tdata;
     output logic                     m_axis_tvalid;
     input  logic                     m_axis_tready;
     output logic                     m_axis_tlast; 
@@ -41,12 +41,17 @@ module data_packer (
     logic [DATA_WIDTH-1:0] data_in;
     logic [DATA_WIDTH-1:0] data_out;
     
+    logic [DATA_WIDTH-1:0] data_reg;
+    logic [DATA_WIDTH:0] pross_reg;
+    
     logic readDataValid;
     logic readDataReady;
     logic readDataLast;
     logic [7:0] fifo_init;
     logic ready;
     logic write;
+    
+
     
     logic [DATA_WIDTH-1:0] mem[512];
     
@@ -56,9 +61,13 @@ module data_packer (
     logic ready_r;
     logic [7:0] i;
     logic [7:0] j;
+    logic [7:0] l;
+    
     logic tlast_r;
+    logic tlast_w;
     
     logic [7:0] readData;
+    logic readDataReady_r;
     
   fifo #(
      .DataWidth(8), 
@@ -70,7 +79,7 @@ module data_packer (
              
         .writeData(s_axis_tdata),
         .writeDataValid(s_axis_tvalid),
-        .writeDataReady(s_axis_tready_f),
+        .writeDataReady(s_axis_tready),
         .writeDataLast(s_axis_tlast),
              
         .readData(readData),
@@ -78,11 +87,10 @@ module data_packer (
         .readDataReady(readDataReady),
         .readDataLast(readDataLast)
   );
-  
-    
+      
     always_ff @ (posedge clk or posedge reset) begin
      if (reset == 1 | t_last)
-      count <= 0;
+      count <= 1;
       else if (enable == 1)
       begin
         count <= count_next;
@@ -107,23 +115,25 @@ module data_packer (
     
     always_ff @ (posedge clk or posedge reset)
     begin
-    if (reset)
-    out_tlast <= 1'b0;
-    else if(t_last)
-    out_tlast <= 1'b1;
-    else
-    out_tlast <= 1'b0; 
+    if (reset == 1)
+    begin
+      out_tlast <= 0;
     end
+      else if (enable == 1)
+      begin
+        out_tlast <= t_last;
+      end
+   end
     
     
     always_ff @ (posedge clk or posedge reset)
     begin
-      if(reset | i == k-1)begin
-        readDataReady <= 0;
+      if(reset | i == k)begin
+        readDataReady_r <= 0;
         end
     else
        if (readDataReady_w)
-         readDataReady <=1;
+         readDataReady_r <=1;
        end
        
    always_ff @ (posedge clk or posedge reset)
@@ -131,7 +141,7 @@ module data_packer (
       if(reset | i==k)
         i <= 0;
     else
-       if (start_fifo_read)
+       if (start_fifo_read & enable)
          i <= i+1;
        end
        
@@ -140,16 +150,36 @@ module data_packer (
       if(reset | j == k-1)
         tlast_r <= 1'b0;
     else
-       if (t_last)
+       if (out_tlast & enable)
          tlast_r <= 1'b1;
        end
+       
+    always_ff @ (posedge clk or posedge reset)
+    begin
+      if(reset | l == k-1)
+        tlast_w <= 1'b0;
+    else
+       if (t_last & enable)
+         tlast_w <= 1'b1;
+       end  
+       
+       
+    always_ff @ (posedge clk or posedge reset)
+    begin
+      if(reset | l == k)
+        l <= 0;
+    else
+       if (tlast_r & enable)
+         l <= l+1;
+       end 
+       
        
    always_ff @ (posedge clk or posedge reset)
     begin
       if(reset | j == k)
         j <= 0;
     else
-       if (tlast_r)
+       if (tlast_r &enable)
          j <= j+1;
        end
        
@@ -160,7 +190,23 @@ module data_packer (
        else if (count == fifo_init)
          write <=1;
        end
-           
+       
+  always_ff @ (posedge clk or posedge reset) 
+    begin
+    if(reset)
+         data_reg <= 0;
+       else if (enable)
+         data_reg <= data_in;
+     end
+     
+   always_ff @ (posedge clk or posedge reset) 
+    begin
+    if(reset)
+         pross_reg <= 0;
+       else if (gth)
+         pross_reg <= (data_in + readData);
+     end
+        
     assign data_in = s_axis_tdata;
     
     assign init_confi = confi;
@@ -168,22 +214,25 @@ module data_packer (
     assign k = init_confi[15:8];
     assign fifo_init = packet_length - k;
     assign readDataReady_w =(count == packet_length - 1);
+    assign gth = tlast_w & enable;
 
     //assign ready = s_axis_tvalid & s_axis_tready;
     //assign s_axis_tready = (valid_out == 0);
     
     assign t_last = s_axis_tlast;
-    assign m_axis_tdata = (tlast_r == 1) ? (data_in + readData ) : data_in ;
+    assign m_axis_tdata = (tlast_r == 1) ? pross_reg : data_reg ;
     
-    assign m_axis_tlast = t_last;//out_tlast;
+    assign m_axis_tlast = out_tlast;
 
-    assign m_axis_tdata = data_out;
-    assign start_fifo_read = (readDataReady==1);
+   // assign m_axis_tdata = data_out;
+    assign start_fifo_read = (readDataReady_r==1);
+    assign readDataReady = start_fifo_read & enable;
+    
     
     assign ready = (valid_out == 0) | ((m_axis_tready == 1) & (valid_out == 1));
     assign enable = ((ready == 1) & (s_axis_tvalid == 1));
     
-    assign s_axis_tready = (ready == 1) & s_axis_tready_f;
+    assign s_axis_tready = (ready == 1);
      
-    assign m_axis_tvalid = s_axis_tvalid;
+    assign m_axis_tvalid = valid_out;
     endmodule

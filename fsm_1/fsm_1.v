@@ -39,12 +39,7 @@ module fsm_1(
              STATE_3 = 3'd3 ,
              STATE_4 = 3'd4 ;
              
- localparam  IDLE = 4'd0,   
- 
-             SIXTEEN = 4'd8,
-             FOUR = 4'd9,
-             CHOP = 4'd5,
-    
+ localparam  IDLE = 4'd0,     
              s0 = 4'd1,
              s1 = 4'd2,
              s2 = 4'd3,
@@ -53,11 +48,6 @@ module fsm_1(
              s5 = 4'd6,
              s6 = 4'd7; 
              
-  localparam  nones = 3'd0,
-                g1 = 3'd1,
-                g2 = 3'd2,
-                g3 = 3'd3,
-                g4 = 3'd4; 
             
             
  reg [2:0] cs;
@@ -67,8 +57,9 @@ module fsm_1(
 
  reg [3:0] CurrentState ;
  reg [3:0] NextState ;
+ reg s_axis_tlast_d;
  
- reg m_axis_tvalid_r=0;
+ reg m_axis_tvalid_r;
  
  reg flag2;
  reg flag3;
@@ -131,7 +122,7 @@ always@ ( posedge clk ) begin
      reg_data <= 0 ;
     else 
      if(NextState == (STATE_2))
-      reg_data <= i_wdata ;
+     reg_data <= i_wdata ;
  end
  
 always @(posedge clk )
@@ -141,11 +132,11 @@ always @(posedge clk )
 	begin
 		if (i_wstrb[k])
 		  begin
-			mem[k*4+:8] <= i_wdata[k*4+:8];
+			mem[k*4+:4] <= i_wdata[k*4+:4];
 	      end
 		else 
 		  begin
-			mem[k*4+:8] <= 4'b0;
+			mem[k*4+:4] <= 4'b0;
 	      end
 	end
   end
@@ -229,6 +220,8 @@ next_state = state;
           end
             
   s0:  begin //1 (less than sixteen) 
+          if(t_last)
+            next_state = s6;
             if(s_axis_tkeep_reg_t < 16)
              next_state = s5;
              else if(s_axis_tkeep_reg_t ==16)
@@ -238,36 +231,34 @@ next_state = state;
          end 
          
           
-  s1:    if(t_last)
+  s1:   begin //2 equal to sixteen
+         if(t_last)
            next_state = s6;
-         else if (s_axis_tkeep_reg_t < 16) //equal to sixteen
+         else if (s_axis_tkeep_reg_t < 16) 
              next_state = s0;
           else if(s_axis_tkeep_reg_t ==16)
              next_state = s1;
            else
              next_state = s2;        
-         
-  s2:  begin //3 (greater than sixteen)  
-          next_state = s3;
+        end 
+  s2:  begin //3 (greater than sixteen)   
+           next_state = s3;
         end 
                                     
   s3:  begin //4 extension state
-        if(t_last)
-          begin
-           if(s_axis_tkeep_reg_t == 16)
-             next_state = s1;
-           else
-             next_state = s6;
-          end  
-            else if(s_axis_tkeep_reg_t < 16)
-             next_state = s4;
-             else if(s_axis_tkeep_reg_t ==16)
-             next_state = s1;
-             else 
+      if(s_axis_tkeep_reg_t ==16)
+         next_state = s1;
+       else if(t_last)
+          next_state = s6;  
+        else if(s_axis_tkeep_reg_t < 16)
+           next_state = s4;
+          else 
              next_state = s2;                       
         end 
   s4 : begin //5  extention state
-            if(s_axis_tkeep_reg_t < 16)
+           if(t_last)
+             next_state = s6;
+            else if(s_axis_tkeep_reg_t < 16)
              next_state = s4;
              else if(s_axis_tkeep_reg_t ==16)
              next_state = s1;
@@ -283,7 +274,7 @@ next_state = state;
          next_state = s2;         
      end 
      
-  s6 : begin
+  s6 : begin //this for the tlast processing state
         if(s_axis_tkeep_reg_t < 16)
          next_state = s0;
          else if(s_axis_tkeep_reg_t ==16)
@@ -295,25 +286,27 @@ next_state = state;
 end 
 
  
-
 always@(*)
  begin
  if(m_axis_tready_r)
+ t_keep_out = 16;
+ m_axis_tvalid_r = 0;
+  begin
   case(state)
    IDLE: begin //reset state
-         mem_1 = mem; 
+           mem_1 = mem; 
          end
    s0 : begin //1 less
            mem_1 = mem; //acumulate
-           //mem_1 = mem_d << s_axis_tkeep_reg_t_r_d;//accumulate
         end
    s1 : begin //2 equal
            case(s_axis_tkeep_reg_t_r_d)
            4: mem_s = (mem << 4) + mem_d;
            8: mem_s = (mem << 8) + mem_d;
-           12: mem_s = (mem << 12) + mem_d;
+           12:mem_s = (mem << 12) + mem_d;
            0: mem_s = mem;
            endcase
+          m_axis_tvalid_r = 1'b1;
         end        
    s2 : begin //3 over
          case(s_axis_tkeep_reg_t_r_d)
@@ -330,45 +323,53 @@ always@(*)
                mem_s = mem_1;
              end
          endcase
+         m_axis_tvalid_r = 1'b1;
         end 
-   s3 : begin //4
+   s3 : begin //4 right shift of left over prev nibbles
          case(s_axis_tkeep_reg_t3)
          4: mem_1 = (mem >> 4);
          8: mem_1 = (mem >> 8);
          12: mem_1 = (mem >> 12);
          endcase
        end
-   s4 : begin //5
+   s4 : begin //5 right shift with accumlate
          case(s_axis_tkeep_reg_t_r_d)
            4: mem_1 = (mem << 4) + mem_d;
            8: mem_1 = (mem << 8) + mem_d;  
            12: mem_s = mem_1 + (mem << 12);         
          endcase
+             if(s_axis_tlast_d)
+              mem_s = mem_1;
       end
        
-   s5 : begin //6
+   s5 : begin //6 need of shift of current sample to inject into prev accum sum;
          case(s_axis_tkeep_reg_t_r_d)
            4: mem_1 = (mem << 4) + mem_d;
            8: mem_1 = (mem << 8) + mem_d;
           12: mem_1 = (mem << 12) + mem_d;   
          endcase
       end 
-   s6 : begin
+      
+   s6 : begin //7
          case(s_axis_tkeep_reg_t_r_d)
            0: begin
                mem_s = mem;
-               t_keep_o = 4;
+               t_keep_out = s_axis_tkeep_d;
               end
            4: begin
               mem_s = (mem << 4) + mem_d;
-              t_keep_o = 16;
+              t_keep_out = 16;
               end
-           8: mem_s = (mem << 8) + mem_d;   
+           8: begin 
+              mem_s = (mem << 8) + mem_d;
+              t_keep_out = 16;
+              end   
          endcase
-       
-      end            
+         m_axis_tvalid_r = 1'b1;
+      end
+               
    endcase
-   
+     end 
   end  
     
 always@(posedge clk)
@@ -381,20 +382,23 @@ begin
      s_axis_tkeep_reg_t_r_d <= s_axis_tkeep_reg_t_r;
     end
   else
+    begin
      s_axis_tkeep_reg_t_r <= 0;
      s_axis_tkeep_reg_t_r_d <= s_axis_tkeep_reg_t_r;
-  end   
+  end
+     
   m_axis_tready_r <= m_axis_tready;
   mem_d <= mem_1;
   t_keep_out_d <= t_keep_out;
   s_axis_tkeep_d <= t_keep;
   s_axis_tkeep_d2 <= s_axis_tkeep_d;
-  state_d <= state; 
+  state_d <= state;
+ end
  end
  
  always@(posedge clk)
      begin
-     if(state == s2)
+     if(state == s2 | state == s6)
       s_axis_tkeep_reg_t3 <= 16 - s_axis_tkeep_reg_t_r_d;
      end
  
@@ -408,62 +412,7 @@ begin
          end
  end
  
-always@(*)
-begin
- if(m_axis_tready)
-     if(state == s2 |state == s1)
-       begin
-        t_keep_out = 16;
-       end
-     else if(state == s6)
-       begin
-        t_keep_out = t_keep_o;
-       end
-     else
-       begin
-        t_keep_out = t_keep_out_d;
-       end
- end
- /*
- always@(posedge clk)
- begin
-     if(areset)
-     cs <= nones;
-     else
-     cs <= ns;
- end
- 
-always@(*)
-begin
-ns = cs;
-case(cs)
-  nones: ns = g1;
-  g1:begin 
-      if(s_axis_tkeep_reg_t < 16)
-      ns = g1;
-      else if(s_axis_tkeep_reg_t ==16)
-      ns = g2;
-      else 
-      ns = g3;
-      end
-  g2: begin
-      end
-  g3:  ns = g4;   
-endcase
-end
 
-
-always@(*)
-begin
- case(cs)
- g1: s_axis_tkeep_reg_t2 = s_axis_tkeep_reg_t_r;
- g2: s_axis_tkeep_reg_t2 = 16;
- g3: s_axis_tkeep_reg_t2 = 16;
- g4: s_axis_tkeep_reg_t2 = s_axis_tkeep_reg_t2_d % 16;
- endcase
-end
- */
- 
  always@(*) begin
  case(i_wstrb_i)
   1 :  i_wstrb = 4'b0001;
@@ -484,18 +433,16 @@ end
  always@(posedge clk)
   begin
    if(areset)
-    s_axis_tlast_r = s_axis_tlast;
+    s_axis_tlast_r <= s_axis_tlast;
    else
-    s_axis_tlast_r = s_axis_tlast;
+    s_axis_tlast_r <= s_axis_tlast;
    end
+  
  
-always@(*)
-begin
- if(((CurrentState == STATE_2) | (CurrentState == STATE_3)) & ((state == s2) | (state == s1)))
-   m_axis_tvalid_r <= 1;
- end  
- 
- 
+ always@(posedge clk) begin
+    s_axis_tlast_d <= t_last;
+   end
+   
  assign t_keep = s_axis_tkeep;
  assign i_wdata = s_axis_tdata;
  
@@ -506,9 +453,5 @@ begin
  assign m_axis_tdata =  mem_s;
  assign m_axis_tkeep = t_keep_out;
  assign m_axis_tlast = (state == s1 | state == s2 ) ? s_axis_tlast_r: 1'b0; 
- 
- 
- assign m_axis_tvalid = m_axis_tvalid_r;
- assign m_axis_tvalid = (CurrentState == STATE_2) | (CurrentState == STATE_3);
- 
+ assign m_axis_tvalid = (m_axis_tvalid_r);
  endmodule

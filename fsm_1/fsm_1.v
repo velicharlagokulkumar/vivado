@@ -47,7 +47,8 @@ module fsm_1(
              s4 = 4'd5,
              s5 = 4'd6,
              s6 = 4'd7,
-             s7 =4; 
+             s7 = 4'd8,
+             s8 = 4'd9; 
              
             
             
@@ -206,7 +207,7 @@ always@(posedge clk)
 always@(*)
 begin
 next_state = state;
- if(m_axis_tready)
+ if(m_axis_tready) begin
  case(state)
   IDLE:  begin //0 (Default)
           if(s_axis_tvalid & s_axis_tready)
@@ -250,7 +251,9 @@ next_state = state;
         end 
                                     
   s3:  begin //4 extension state
-       if(t_last)
+       if(t_last & s_axis_tkeep_reg_t > 16)
+        next_state = s7;
+        else if(t_last)
           next_state = s6;  
         else if(s_axis_tkeep_reg_t < 16)
            next_state = s4;
@@ -272,7 +275,11 @@ next_state = state;
              next_state = s2;                       
         end
   s5 :  begin //6 (less than sixteen need of shift with accumulate) 
-        if(s_axis_tkeep_reg_t < 16)
+      if(t_last & s_axis_tkeep_reg_t > 16)
+        next_state = s7;
+       else if(t_last)
+        next_state = s6;
+        else if(s_axis_tkeep_reg_t < 16)
          next_state = s5;
          else if(s_axis_tkeep_reg_t ==16)
          next_state = s1;
@@ -288,9 +295,19 @@ next_state = state;
          else
          next_state = s2;
        end   
-  
-       
+  s7: begin
+       next_state = s8;  
+      end
+  s8: begin
+        if(s_axis_tkeep_reg_t < 16)
+         next_state = s0;
+         else if(s_axis_tkeep_reg_t ==16)
+         next_state = s1;
+         else
+         next_state = s2;
+      end
   endcase
+  end
 end 
 
  
@@ -379,7 +396,31 @@ always@(*)
          endcase
            m_axis_tvalid_r = 1'b1;
         end
-               
+   s7 : begin  //8       
+        case(s_axis_tkeep_reg_t_r_d)
+          4: begin
+              mem_1 = mem_d + (mem << 4);
+              mem_s = mem_1;
+             end
+          8: begin 
+              mem_1 = mem_d + (mem << 8);
+              mem_s = mem_1;
+             end   
+          12: begin 
+               mem_1 = mem_d + (mem << 12);
+               mem_s = mem_1;
+             end
+         endcase  
+       end
+   s8:  begin //9
+            case(s_axis_tkeep_reg_t3)
+             4: mem_s = (mem >> 4);
+             8: mem_s = (mem >> 8);
+             12: mem_s = (mem >> 12);
+             endcase
+           m_axis_tvalid_r = 1'b1;
+           t_keep_out = s_axis_tkeep_reg_t_r_d;
+        end              
    endcase
      end 
   end  
@@ -388,7 +429,7 @@ always@(posedge clk)
 begin
 if(m_axis_tready)
 begin
-  if(next_state != s6)
+  if(next_state != s6 & next_state != s8)
     begin
      s_axis_tkeep_reg_t_r <= (s_axis_tkeep_reg_t >= 16) ? s_axis_tkeep_reg_t2 : s_axis_tkeep_reg_t;
      s_axis_tkeep_reg_t_r_d <= s_axis_tkeep_reg_t_r;
@@ -410,7 +451,7 @@ begin
  
  always@(posedge clk)
      begin
-     if(state == s2 | state == s6)
+     if(state == s2 | state == s6 | state == s7)
       s_axis_tkeep_reg_t3 <= 16 - s_axis_tkeep_reg_t_r_d;
      end
  
@@ -461,9 +502,9 @@ begin
  assign t_last = s_axis_tlast;
  assign i_wstrb_i = s_axis_tkeep/4;
 
- assign s_axis_tready = (CurrentState == (STATE_1)) | (NextState == (STATE_2)) & (next_state != s2);
+ assign s_axis_tready = ((CurrentState == (STATE_1)) | (NextState == (STATE_2))) & ((next_state != s2) & (next_state != s7));
  assign m_axis_tdata =  mem_s;
  assign m_axis_tkeep = t_keep_out;
- assign m_axis_tlast = (state == s1 | state == s2 | state == s6) ? s_axis_tlast_r: 1'b0; 
+ assign m_axis_tlast = (state == s1 | state == s2 | state == s6 | state == s8) ? s_axis_tlast_r: 1'b0; 
  assign m_axis_tvalid = (m_axis_tvalid_r);
  endmodule

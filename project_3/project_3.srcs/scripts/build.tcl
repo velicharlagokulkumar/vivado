@@ -1,4 +1,5 @@
 # read design sources (add one line for each file)
+ls 
 read_verilog -v "../sources_1/bd/Base_Zynq_MPSoC/hdl/Base_Zynq_MPSoC_wrapper.v"
 
 # read constraints

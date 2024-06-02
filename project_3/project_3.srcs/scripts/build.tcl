@@ -7,7 +7,7 @@ set parent_path [file dirname $script_path]
 read_verilog -v "$parent_path/sources_1/bd/Base_Zynq_MPSoC/hdl/Base_Zynq_MPSoC_wrapper.v"
 
 # read constraints
-read_xdc "../constrs_1/new/top.xdc"
+read_xdc "$parent_path/constrs_1/new/top.xdc"
 
 # synth
 synth_design -top "Base_Zynq_MPSoC_wrapper" -part "xczu28dr-ffvg1517-2-e"

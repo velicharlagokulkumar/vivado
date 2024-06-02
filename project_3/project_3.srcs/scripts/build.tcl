@@ -18,8 +18,8 @@ source $script_path/Base_Zynq_MPSoC.tcl
 #open_bd_design $parent_path/sources_1/bd/Base_Zynq_MPSoC/Base_Zynq_MPSoC.bd
 
 #If the block design is the top-level hierarchy, then create and add wrapper file
-make_wrapper -files [get_files $script_path/.srcs/sources_1/bd/Base_Zynq_MPSoC/Base_Zynq_MPSoC.bd] -top
-read_verilog $script_path/.srcs/sources_1/bd/Base_Zynq_MPSoC/hdl/Base_Zynq_MPSoC_wrapper.v
+make_wrapper -files [get_files $parent_path/.srcs/sources_1/bd/Base_Zynq_MPSoC/Base_Zynq_MPSoC.bd] -top
+read_verilog $parent_path/.srcs/sources_1/bd/Base_Zynq_MPSoC/hdl/Base_Zynq_MPSoC_wrapper.v
 
 #Alternatively, you can read a top level RTL file
 #read_vhdl top.vhd
@@ -29,8 +29,8 @@ read_verilog $script_path/.srcs/sources_1/bd/Base_Zynq_MPSoC/hdl/Base_Zynq_MPSoC
 read_xdc "$parent_path/constrs_1/new/top.xdc"
 
 #If the block design does not have the output products generated, generate the output products needed for synthesis and implementation runs
-set_property synth_checkpoint_mode None [get_files $script_path/.srcs/sources_1/bd/Base_Zynq_MPSoC/Base_Zynq_MPSoC.bd]
-generate_target all [get_files $script_path/.srcs/sources_1/bd/Base_Zynq_MPSoC/Base_Zynq_MPSoC.bd]
+set_property synth_checkpoint_mode None [get_files $parent_path/.srcs/sources_1/bd/Base_Zynq_MPSoC/Base_Zynq_MPSoC.bd]
+generate_target all [get_files $parent_path/.srcs/sources_1/bd/Base_Zynq_MPSoC/Base_Zynq_MPSoC.bd]
 
 #Run synthesis and implementation
 synth_design -top Base_Zynq_MPSoC_wrapper

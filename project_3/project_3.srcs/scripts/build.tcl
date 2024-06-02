@@ -1,5 +1,7 @@
 # read design sources (add one line for each file)
-exec ls 
+set script_path [ file dirname [ file normalize [ info script ] ] ]
+puts $script_path
+ 
 read_verilog -v "../sources_1/bd/Base_Zynq_MPSoC/hdl/Base_Zynq_MPSoC_wrapper.v"
 
 # read constraints

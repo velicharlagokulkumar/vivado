@@ -1,8 +1,10 @@
 # read design sources (add one line for each file)
 set script_path [ file dirname [ file normalize [ info script ] ] ]
 puts $script_path
- 
-read_verilog -v "../sources_1/bd/Base_Zynq_MPSoC/hdl/Base_Zynq_MPSoC_wrapper.v"
+
+set parent_path [file dirname $script_path]
+
+read_verilog -v "$parent_path/sources_1/bd/Base_Zynq_MPSoC/hdl/Base_Zynq_MPSoC_wrapper.v"
 
 # read constraints
 read_xdc "../constrs_1/new/top.xdc"

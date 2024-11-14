@@ -1,1 +1,1 @@
-![gk-Page-70 drawio (3)](https://github.com/user-attachments/assets/dde4a0ff-1f49-4d4d-8415-d188bb8d6b90)
+![gk-Page-70 drawio (3) (2)](https://github.com/user-attachments/assets/c7aa49cc-fe3f-4318-8651-422b08dc4d25)

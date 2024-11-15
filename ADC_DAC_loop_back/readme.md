@@ -1,6 +1,5 @@
-![gk-Copy of Page-70 drawio (1)](https://github.com/user-attachments/assets/87a885f9-10e4-4c71-b86b-e4a868fb67bc)
 
-
+![gk-Copy of Page-70 drawio](https://github.com/user-attachments/assets/b74b8295-4914-4655-8c82-606921940281)
 
 Block Design
 ------------

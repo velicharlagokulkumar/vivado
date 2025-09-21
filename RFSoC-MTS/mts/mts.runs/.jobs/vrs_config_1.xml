@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_1_rst_ps8_0_99M_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_rst_ps8_0_99M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_startup_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_startup_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_pl_sysref_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_pl_sysref_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_uram_play128k_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_uram_play128k_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_proc_sys_reset_1_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_proc_sys_reset_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ctrl_snapshot_128k_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ctrl_snapshot_128k_0_2_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ctrl_snapshot_128k_0_3_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ctrl_snapshot_128k_0_4_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ctrl_snapshot_128k_0_5_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ctrl_snapshot_128k_0_6_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ctrl_snapshot_128k_0_7_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_ctrl_snapshot_128k_0_8_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_usp_rf_data_converter_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_usp_rf_data_converter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_vio_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_vio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_bram_ctrl_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_blk_mem_gen_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_bram_ctrl_1_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_gpio_1_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_gpio_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_blk_mem_gen_0_1_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_register_slice_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_register_slice_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axis_broadcaster_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_broadcaster_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axis_dwidth_converter_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axis_dwidth_converter_1_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axi_gpio_0_1_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_gpio_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_axis_clock_converter_0_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_blk_mem_gen_1_1_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_dwidth_converter_1_1_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_dwidth_converter_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_bram_ctrl_0_2_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_clock_converter_0_1_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_clock_converter_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_blk_mem_gen_1_2_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_dwidth_converter_1_2_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_dwidth_converter_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_bram_ctrl_0_3_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_clock_converter_0_2_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_clock_converter_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_blk_mem_gen_1_3_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_dwidth_converter_1_3_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_dwidth_converter_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_bram_ctrl_0_4_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_clock_converter_0_3_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_clock_converter_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_blk_mem_gen_1_4_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_dwidth_converter_1_4_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_dwidth_converter_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_bram_ctrl_0_5_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_clock_converter_0_4_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_clock_converter_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_blk_mem_gen_1_5_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_dwidth_converter_1_5_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_dwidth_converter_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_bram_ctrl_0_6_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_clock_converter_0_5_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_clock_converter_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_blk_mem_gen_1_6_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_dwidth_converter_1_6_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_dwidth_converter_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_bram_ctrl_0_7_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_clock_converter_0_6_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_clock_converter_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_blk_mem_gen_1_7_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_dwidth_converter_1_7_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_dwidth_converter_1_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axi_bram_ctrl_0_8_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_clock_converter_0_7_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_axis_clock_converter_0_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_axis_clock_converter_0_8_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_system_ila_2_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_system_ila_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_system_ila_1_2_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_system_ila_1_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_clk_wiz_0_1_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_clk_wiz_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_xbar_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_s00_regslice_51_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_s00_regslice_51_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_us_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_us_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_rs_w_1_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_rs_w_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_m00_regslice_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_m00_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_m01_regslice_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_m01_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_ds_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_ds_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_rs_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_rs_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_rs_w_0_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_rs_w_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_rs_w_1_synth_1"/>
+	</Run>
+	<Run Id="design_1_auto_ds_1_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_ds_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_auto_pc_1_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_pc_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_1_auto_pc_0_synth_1"/>
+	</Run>
+	<Run Id="design_1_s00_regslice_52_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_s00_regslice_52_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_1_auto_pc_2_synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_pc_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_1_rst_ps8_0_99M_0_synth_1"/>
+		<Parent Id="design_1_startup_0_0_synth_1"/>
+		<Parent Id="design_1_pl_sysref_0_0_synth_1"/>
+		<Parent Id="design_1_uram_play128k_0_0_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_1_0_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_0_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_2_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_3_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_4_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_5_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_6_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_7_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_8_synth_1"/>
+		<Parent Id="design_1_usp_rf_data_converter_0_0_synth_1"/>
+		<Parent Id="design_1_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="design_1_vio_0_0_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_1_0_synth_1"/>
+		<Parent Id="design_1_axi_gpio_1_0_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_0_1_synth_1"/>
+		<Parent Id="design_1_axis_register_slice_0_0_synth_1"/>
+		<Parent Id="design_1_axis_broadcaster_0_0_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_0_0_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_0_synth_1"/>
+		<Parent Id="design_1_axi_gpio_0_1_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_0_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_1_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_1_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_2_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_1_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_2_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_2_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_3_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_2_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_3_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_3_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_4_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_3_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_4_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_4_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_5_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_4_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_5_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_5_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_6_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_5_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_6_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_6_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_7_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_6_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_7_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_7_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_8_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_7_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_8_synth_1"/>
+		<Parent Id="design_1_system_ila_2_0_synth_1"/>
+		<Parent Id="design_1_system_ila_1_2_synth_1"/>
+		<Parent Id="design_1_clk_wiz_0_1_synth_1"/>
+		<Parent Id="design_1_xbar_0_synth_1"/>
+		<Parent Id="design_1_s00_regslice_51_synth_1"/>
+		<Parent Id="design_1_auto_us_0_synth_1"/>
+		<Parent Id="design_1_auto_rs_w_1_synth_1"/>
+		<Parent Id="design_1_m00_regslice_0_synth_1"/>
+		<Parent Id="design_1_m01_regslice_0_synth_1"/>
+		<Parent Id="design_1_auto_ds_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_0_synth_1"/>
+		<Parent Id="design_1_auto_rs_0_synth_1"/>
+		<Parent Id="design_1_auto_rs_w_0_synth_1"/>
+		<Parent Id="design_1_auto_ds_1_synth_1"/>
+		<Parent Id="design_1_auto_pc_1_synth_1"/>
+		<Parent Id="design_1_s00_regslice_52_synth_1"/>
+		<Parent Id="design_1_auto_pc_2_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="design_1_rst_ps8_0_99M_0_synth_1"/>
+		<Parent Id="design_1_startup_0_0_synth_1"/>
+		<Parent Id="design_1_pl_sysref_0_0_synth_1"/>
+		<Parent Id="design_1_uram_play128k_0_0_synth_1"/>
+		<Parent Id="design_1_proc_sys_reset_1_0_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_0_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_2_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_3_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_4_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_5_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_6_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_7_synth_1"/>
+		<Parent Id="design_1_ctrl_snapshot_128k_0_8_synth_1"/>
+		<Parent Id="design_1_usp_rf_data_converter_0_0_synth_1"/>
+		<Parent Id="design_1_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="design_1_vio_0_0_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_0_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_1_0_synth_1"/>
+		<Parent Id="design_1_axi_gpio_1_0_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_0_1_synth_1"/>
+		<Parent Id="design_1_axis_register_slice_0_0_synth_1"/>
+		<Parent Id="design_1_axis_broadcaster_0_0_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_0_0_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_0_synth_1"/>
+		<Parent Id="design_1_axi_gpio_0_1_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_0_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_1_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_1_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_2_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_1_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_2_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_2_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_3_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_2_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_3_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_3_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_4_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_3_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_4_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_4_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_5_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_4_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_5_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_5_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_6_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_5_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_6_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_6_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_7_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_6_synth_1"/>
+		<Parent Id="design_1_blk_mem_gen_1_7_synth_1"/>
+		<Parent Id="design_1_axis_dwidth_converter_1_7_synth_1"/>
+		<Parent Id="design_1_axi_bram_ctrl_0_8_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_7_synth_1"/>
+		<Parent Id="design_1_axis_clock_converter_0_8_synth_1"/>
+		<Parent Id="design_1_system_ila_2_0_synth_1"/>
+		<Parent Id="design_1_system_ila_1_2_synth_1"/>
+		<Parent Id="design_1_clk_wiz_0_1_synth_1"/>
+		<Parent Id="design_1_xbar_0_synth_1"/>
+		<Parent Id="design_1_s00_regslice_51_synth_1"/>
+		<Parent Id="design_1_auto_us_0_synth_1"/>
+		<Parent Id="design_1_auto_rs_w_1_synth_1"/>
+		<Parent Id="design_1_m00_regslice_0_synth_1"/>
+		<Parent Id="design_1_m01_regslice_0_synth_1"/>
+		<Parent Id="design_1_auto_ds_0_synth_1"/>
+		<Parent Id="design_1_auto_pc_0_synth_1"/>
+		<Parent Id="design_1_auto_rs_0_synth_1"/>
+		<Parent Id="design_1_auto_rs_w_0_synth_1"/>
+		<Parent Id="design_1_auto_ds_1_synth_1"/>
+		<Parent Id="design_1_auto_pc_1_synth_1"/>
+		<Parent Id="design_1_s00_regslice_52_synth_1"/>
+		<Parent Id="design_1_auto_pc_2_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

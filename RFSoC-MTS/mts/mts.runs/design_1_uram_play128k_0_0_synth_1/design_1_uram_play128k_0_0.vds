@@ -1,0 +1,402 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Sep 21 13:01:39 2025
+# Process ID: 290570
+# Current directory: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_uram_play128k_0_0_synth_1
+# Command line: vivado -log design_1_uram_play128k_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_uram_play128k_0_0.tcl
+# Log file: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_uram_play128k_0_0_synth_1/design_1_uram_play128k_0_0.vds
+# Journal file: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_uram_play128k_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_uram_play128k_0_0.tcl -notrace
+Command: synth_design -top design_1_uram_play128k_0_0 -part xczu28dr-ffvg1517-2-e -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'design_1_uram_play128k_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu28dr'
+INFO: [Common 17-1540] The version limit for your license is '2020.05' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Device 21-403] Loading part xczu28dr-ffvg1517-2-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 293820 
+load diablo GTM unisim library
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2469.422 ; gain = 146.719 ; free physical = 37377 ; free virtual = 106960
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_uram_play128k_0_0' [/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.srcs/sources_1/bd/design_1/ip/design_1_uram_play128k_0_0/synth/design_1_uram_play128k_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'uram_play128k' [/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.srcs/sources_1/imports/hdl/uram_play128k.v:14]
+	Parameter DWIDTH bound to: 256 - type: integer 
+	Parameter MEM_SIZE_BYTES bound to: 131072 - type: integer 
+	Parameter URAM_AWIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-251] ***************************************************** [/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.srcs/sources_1/imports/hdl/uram_play128k.v:60]
+INFO: [Synth 8-251] XXXXXX URAM_AWIDTH                       = 12 [/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.srcs/sources_1/imports/hdl/uram_play128k.v:61]
+INFO: [Synth 8-251] XXXXXX MEM_SIZE_BYTES/(DWIDTH/8)         = 4096 [/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.srcs/sources_1/imports/hdl/uram_play128k.v:62]
+INFO: [Synth 8-251] XXXXXX $clog2(MEM_SIZE_BYTES/(DWIDTH/8)) = 12 [/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.srcs/sources_1/imports/hdl/uram_play128k.v:63]
+INFO: [Synth 8-6155] done synthesizing module 'uram_play128k' (1#1) [/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.srcs/sources_1/imports/hdl/uram_play128k.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_uram_play128k_0_0' (2#1) [/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.srcs/sources_1/bd/design_1/ip/design_1_uram_play128k_0_0/synth/design_1_uram_play128k_0_0.v:58]
+WARNING: [Synth 8-3331] design uram_play128k has unconnected port axis_tready
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2526.141 ; gain = 203.438 ; free physical = 37320 ; free virtual = 106918
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2533.078 ; gain = 210.375 ; free physical = 37353 ; free virtual = 106951
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2533.078 ; gain = 210.375 ; free physical = 37353 ; free virtual = 106951
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2533.078 ; gain = 0.000 ; free physical = 37355 ; free virtual = 106954
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2682.953 ; gain = 0.000 ; free physical = 37159 ; free virtual = 106760
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2706.766 ; gain = 23.812 ; free physical = 37152 ; free virtual = 106754
+load diablo GTM unisim library
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2706.766 ; gain = 384.062 ; free physical = 37232 ; free virtual = 106835
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu28dr-ffvg1517-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2706.766 ; gain = 384.062 ; free physical = 37235 ; free virtual = 106836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2706.766 ; gain = 384.062 ; free physical = 37234 ; free virtual = 106836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2706.766 ; gain = 384.062 ; free physical = 37220 ; free virtual = 106825
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module uram_play128k 
+Detailed RTL Component Info : 
++---Registers : 
+	              256 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 4272 (col length:192)
+BRAMs: 2160 (col length: RAMB18 192 RAMB36 96)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[255] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[254] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[253] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[252] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[251] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[250] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[249] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[248] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[247] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[246] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[245] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[244] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[243] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[242] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[241] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[240] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[239] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[238] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[237] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[236] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[235] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[234] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[233] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[232] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[231] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[230] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[229] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[228] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[227] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[226] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[225] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[224] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[223] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[222] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[221] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[220] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[219] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[218] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[217] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[216] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[215] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[214] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[213] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[212] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[211] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[210] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[209] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[208] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[207] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[206] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[205] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[204] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[203] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[202] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[201] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[200] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[199] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[198] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[197] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[196] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[195] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[194] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[193] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[192] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[191] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[190] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[189] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[188] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[187] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[186] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[185] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[184] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[183] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[182] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[181] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[180] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[179] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[178] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[177] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[176] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[175] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[174] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[173] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[172] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[171] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[170] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[169] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[168] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[167] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[166] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[165] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[164] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[163] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[162] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[161] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[160] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[159] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[158] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[157] driven by constant 0
+INFO: [Synth 8-3917] design design_1_uram_play128k_0_0 has port portA_cpu_wdata[156] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design design_1_uram_play128k_0_0 has unconnected port axis_tready
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\inst/portAcpu_addr_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\inst/portAcpu_addr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\inst/portAcpu_addr_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\inst/portAcpu_addr_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\inst/portAcpu_addr_reg[4] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 2706.766 ; gain = 384.062 ; free physical = 37219 ; free virtual = 106832
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:44 . Memory (MB): peak = 3022.484 ; gain = 699.781 ; free physical = 34423 ; free virtual = 104082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:44 . Memory (MB): peak = 3022.484 ; gain = 699.781 ; free physical = 34415 ; free virtual = 104073
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:44 . Memory (MB): peak = 3032.500 ; gain = 709.797 ; free physical = 34380 ; free virtual = 104039
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 3048.344 ; gain = 725.641 ; free physical = 34402 ; free virtual = 104060
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 3048.344 ; gain = 725.641 ; free physical = 34402 ; free virtual = 104060
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 3048.344 ; gain = 725.641 ; free physical = 34402 ; free virtual = 104060
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 3048.344 ; gain = 725.641 ; free physical = 34402 ; free virtual = 104060
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 3048.344 ; gain = 725.641 ; free physical = 34417 ; free virtual = 104075
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 3048.344 ; gain = 725.641 ; free physical = 34417 ; free virtual = 104075
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     4|
+|2     |LUT1   |     2|
+|3     |LUT2   |     2|
+|4     |FDRE   |   285|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |   293|
+|2     |  inst   |uram_play128k |   292|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 3048.344 ; gain = 725.641 ; free physical = 34417 ; free virtual = 104075
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 3048.344 ; gain = 551.953 ; free physical = 34420 ; free virtual = 104078
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:45 . Memory (MB): peak = 3048.352 ; gain = 725.641 ; free physical = 34420 ; free virtual = 104078
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3055.281 ; gain = 0.000 ; free physical = 34379 ; free virtual = 104038
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3086.031 ; gain = 0.000 ; free physical = 34125 ; free virtual = 103786
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+127 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:01:18 . Memory (MB): peak = 3086.031 ; gain = 1583.824 ; free physical = 34278 ; free virtual = 103939
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3086.031 ; gain = 0.000 ; free physical = 34277 ; free virtual = 103938
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_uram_play128k_0_0_synth_1/design_1_uram_play128k_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3086.031 ; gain = 0.000 ; free physical = 34248 ; free virtual = 103910
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_uram_play128k_0_0_synth_1/design_1_uram_play128k_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_uram_play128k_0_0_utilization_synth.rpt -pb design_1_uram_play128k_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 21 13:03:06 2025...

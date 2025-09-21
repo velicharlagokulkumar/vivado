@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xczu28dr-ffvg1517-2-e" LaunchTime="1758439897">
+  <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
+  <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
+  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
+  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/startup.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../../../../../../../rfsoc/00_sme_presentation/my_src/hdl/startup.v"/>
+        <Attr Name="ImportTime" Val="1523591917"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/ctrl_snapshot_128k.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../../../../../../../rfsoc/ex_des/zcu111_mini_play-capture128K_2019.1/mts/mts.srcs/sources_1/imports/hdl/ctrl_snapshot_128k.v"/>
+        <Attr Name="ImportTime" Val="1558727494"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/uram_play128k.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../../../../../../../rfsoc/ex_des/zcu111_mini_play-capture128K_2019.1/mts/mts.srcs/sources_1/imports/hdl/uram_play128k.v"/>
+        <Attr Name="ImportTime" Val="1558730186"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/pl_sysref.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../rfsoc/training/r15_5400b/zc1254_2018.3_DAConly5.4G/src/hdl/pl_sysref.v"/>
+        <Attr Name="ImportTime" Val="1530716415"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../../../../../../../rfsoc/ex_des/zcu111_mini_play-capture128K_2019.1/mts/mts.srcs/sources_1/bd/design_1/design_1.bd"/>
+        <Attr Name="ImportTime" Val="1559059014"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../../../../../../../rfsoc/ex_des/zcu111_mini_play-capture128K_2019.1/mts/mts.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1559059209"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="design_1_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/pin_contraints.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../rfsoc/ex_des/test/zcu111_mini_play-capture128K_with_MTS_x1_2019.1_pa7_1p474G/mts/mts.srcs/constrs_1/new/pin_contraints.xdc"/>
+        <Attr Name="ImportTime" Val="1565114992"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/pin_contraints.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_clock_converter_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_dwidth_converter_1_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_1_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_0_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_clock_converter_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_dwidth_converter_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_dwidth_converter_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_dwidth_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_broadcaster_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_m01_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_register_slice_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_1_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_0_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_proc_sys_reset_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_clock_converter_0_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ctrl_snapshot_128k_0_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_startup_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ctrl_snapshot_128k_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ctrl_snapshot_128k_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_0_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_m00_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_usp_rf_data_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps8_0_99M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_vio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_system_ila_1_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_rs_w_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ctrl_snapshot_128k_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ctrl_snapshot_128k_0_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_1_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_dwidth_converter_1_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_dwidth_converter_1_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_rs_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_clock_converter_0_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_1_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_us_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_ds_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_clock_converter_0_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_s00_regslice_52"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_clock_converter_0_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_pl_sysref_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_uram_play128k_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_rs_w_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_system_ila_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_dwidth_converter_1_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_1_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_clock_converter_0_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_dwidth_converter_1_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_clock_converter_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_dwidth_converter_1_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_0_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_1_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_s00_regslice_51"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ctrl_snapshot_128k_0_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_clock_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ctrl_snapshot_128k_0_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_0_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ctrl_snapshot_128k_0_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_0_3"/>
+</GenRun>

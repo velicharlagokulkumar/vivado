@@ -2,6 +2,7 @@
 
 #### What “delayed flop” actually means
 D flip-flop is edge-triggered
+
 A DFF outputs a delayed version of D
 
 ```
@@ -39,3 +40,4 @@ At any of those time output of flop "d_ff" does not changes it remains same as w
 
 So let
 Q(30 ns) = D which is sampled at 25 ns
+

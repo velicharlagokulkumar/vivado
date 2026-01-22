@@ -1,4 +1,4 @@
-<img width="1276" height="600" alt="image" src="https://github.com/user-attachments/assets/6811521e-8fe6-4cfb-9a3b-dfda9a68fdc1" />
+<img width="4944" height="2348" alt="gk-Page-135" src="https://github.com/user-attachments/assets/f36993aa-d96e-40ff-859f-411f6ea152ed" />
 
 #### What “delayed flop” actually means
 D flip-flop is edge-triggered
@@ -42,5 +42,6 @@ At any of those time output of flop "d_ff" does not changes it remains same as w
 
 So let
 Q(30 ns) = D which is sampled at 25 ns
+
 
 

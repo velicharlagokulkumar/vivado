@@ -6,7 +6,9 @@ D flip-flop is edge-triggered
 A DFF outputs a delayed version of D
 
 ```
- why the first change of "d_ff" does not happen at 35ns why it happened at 25ns itself..? since d is a delayed flop like d_ff_2 sampled at 25ns and changed its output at 35ns 
+Why the first change of "d_ff" does not happen at 35ns why it happened at 25ns itself..?
+
+since d is a delayed flop like d_ff_2 sampled at 25ns and changed its output at 35ns 
 ```
 
 #### What “delayed” actually means
@@ -40,4 +42,5 @@ At any of those time output of flop "d_ff" does not changes it remains same as w
 
 So let
 Q(30 ns) = D which is sampled at 25 ns
+
 

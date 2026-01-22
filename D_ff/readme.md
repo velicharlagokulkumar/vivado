@@ -21,6 +21,7 @@ Thats why we say:
     “Q is a delayed version of D”
 
 But the delay is:
+
     • From D change → next clock edge
 
 Not “one more cycle after that”
@@ -42,6 +43,7 @@ At any of those time output of flop "d_ff" does not changes it remains same as w
 
 So let
 Q(30 ns) = D which is sampled at 25 ns
+
 
 
 

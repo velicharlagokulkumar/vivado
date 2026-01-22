@@ -1,29 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 06/07/2018 11:37:21 PM
-// Design Name: 
-// Module Name: ctrl_snapshot_128k
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.03 - Added pipeline between axis tdata/tvalid in and both bram data
-//                 and passthrough tdata/tvalid out
-// Revision 0.02 - Removed bram instantiation and added interface to connect to
-//                 IPI memory block
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-//Make sure parameter DWIDTH and interface_parameter MEM_WIDTH matche
 
 module ctrl_snapshot_128k #(
     parameter DWIDTH = 256,

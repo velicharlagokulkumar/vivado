@@ -1,0 +1,185 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Sep 21 13:00:39 2025
+# Process ID: 283969
+# Current directory: /home/wisig/Videos/MTS/RFSoC-MTS/mts
+# Command line: vivado mts.xpr
+# Log file: /home/wisig/Videos/MTS/RFSoC-MTS/mts/vivado.log
+# Journal file: /home/wisig/Videos/MTS/RFSoC-MTS/mts/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project mts.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_rst_ps8_0_99M_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_startup_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_pl_sysref_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_uram_play128k_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_proc_sys_reset_1_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_ctrl_snapshot_128k_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_ctrl_snapshot_128k_0_2_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_ctrl_snapshot_128k_0_3_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_ctrl_snapshot_128k_0_4_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_ctrl_snapshot_128k_0_5_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_ctrl_snapshot_128k_0_6_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_ctrl_snapshot_128k_0_7_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_ctrl_snapshot_128k_0_8_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_usp_rf_data_converter_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_zynq_ultra_ps_e_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_vio_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_bram_ctrl_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_blk_mem_gen_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_bram_ctrl_1_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_gpio_1_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_blk_mem_gen_0_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_register_slice_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_broadcaster_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_dwidth_converter_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_dwidth_converter_1_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_gpio_0_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_clock_converter_0_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_blk_mem_gen_1_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_dwidth_converter_1_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_bram_ctrl_0_2_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_clock_converter_0_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_blk_mem_gen_1_2_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_dwidth_converter_1_2_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_bram_ctrl_0_3_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_clock_converter_0_2_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_blk_mem_gen_1_3_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_dwidth_converter_1_3_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_bram_ctrl_0_4_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_clock_converter_0_3_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_blk_mem_gen_1_4_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_dwidth_converter_1_4_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_bram_ctrl_0_5_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_clock_converter_0_4_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_blk_mem_gen_1_5_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_dwidth_converter_1_5_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_bram_ctrl_0_6_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_clock_converter_0_5_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_blk_mem_gen_1_6_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_dwidth_converter_1_6_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_bram_ctrl_0_7_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_clock_converter_0_6_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_blk_mem_gen_1_7_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_dwidth_converter_1_7_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axi_bram_ctrl_0_8_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_clock_converter_0_7_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_axis_clock_converter_0_8_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_system_ila_2_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_system_ila_1_2_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_clk_wiz_0_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_xbar_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_s00_regslice_51_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_auto_us_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_auto_rs_w_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_m00_regslice_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_m01_regslice_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_auto_ds_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_auto_pc_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_auto_rs_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_auto_rs_w_0_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_auto_ds_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_auto_pc_1_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_s00_regslice_52_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'design_1_auto_pc_2_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory '/../../../../2019.1/xhub/board_store'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory '/home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/wisig/xilinx_19_2/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 6823.652 ; gain = 358.746 ; free physical = 42110 ; free virtual = 111651
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun Sep 21 13:01:38 2025] Launched design_1_rst_ps8_0_99M_0_synth_1, design_1_startup_0_0_synth_1, design_1_pl_sysref_0_0_synth_1, design_1_uram_play128k_0_0_synth_1, design_1_proc_sys_reset_1_0_synth_1, design_1_ctrl_snapshot_128k_0_0_synth_1, design_1_ctrl_snapshot_128k_0_2_synth_1, design_1_ctrl_snapshot_128k_0_3_synth_1, design_1_ctrl_snapshot_128k_0_4_synth_1, design_1_ctrl_snapshot_128k_0_5_synth_1, design_1_ctrl_snapshot_128k_0_6_synth_1, design_1_ctrl_snapshot_128k_0_7_synth_1, design_1_ctrl_snapshot_128k_0_8_synth_1, design_1_usp_rf_data_converter_0_0_synth_1, design_1_zynq_ultra_ps_e_0_0_synth_1, design_1_vio_0_0_synth_1, design_1_axi_bram_ctrl_0_0_synth_1, design_1_blk_mem_gen_0_0_synth_1, design_1_axi_bram_ctrl_1_0_synth_1, design_1_axi_gpio_1_0_synth_1, design_1_blk_mem_gen_0_1_synth_1, design_1_axis_register_slice_0_0_synth_1, design_1_axis_broadcaster_0_0_synth_1, design_1_axis_dwidth_converter_0_0_synth_1, design_1_axis_dwidth_converter_1_0_synth_1, design_1_axi_gpio_0_1_synth_1, design_1_axis_clock_converter_0_0_synth_1, design_1_blk_mem_gen_1_1_synth_1, design_1_axis_dwidth_converter_1_1_synth_1, design_1_axi_bram_ctrl_0_2_synth_1, design_1_axis_clock_converter_0_1_synth_1, design_1_blk_mem_gen_1_2_synth_1, design_1_axis_dwidth_converter_1_2_synth_1, design_1_axi_bram_ctrl_0_3_synth_1, design_1_axis_clock_converter_0_2_synth_1, design_1_blk_mem_gen_1_3_synth_1, design_1_axis_dwidth_converter_1_3_synth_1, design_1_axi_bram_ctrl_0_4_synth_1, design_1_axis_clock_converter_0_3_synth_1, design_1_blk_mem_gen_1_4_synth_1, design_1_axis_dwidth_converter_1_4_synth_1, design_1_axi_bram_ctrl_0_5_synth_1, design_1_axis_clock_converter_0_4_synth_1, design_1_blk_mem_gen_1_5_synth_1, design_1_axis_dwidth_converter_1_5_synth_1, design_1_axi_bram_ctrl_0_6_synth_1, design_1_axis_clock_converter_0_5_synth_1, design_1_blk_mem_gen_1_6_synth_1, design_1_axis_dwidth_converter_1_6_synth_1, design_1_axi_bram_ctrl_0_7_synth_1, design_1_axis_clock_converter_0_6_synth_1, design_1_blk_mem_gen_1_7_synth_1, design_1_axis_dwidth_converter_1_7_synth_1, design_1_axi_bram_ctrl_0_8_synth_1, design_1_axis_clock_converter_0_7_synth_1, design_1_axis_clock_converter_0_8_synth_1, design_1_system_ila_2_0_synth_1, design_1_system_ila_1_2_synth_1, design_1_clk_wiz_0_1_synth_1, design_1_xbar_0_synth_1, design_1_s00_regslice_51_synth_1, design_1_auto_us_0_synth_1, design_1_auto_rs_w_1_synth_1, design_1_m00_regslice_0_synth_1, design_1_m01_regslice_0_synth_1, design_1_auto_ds_0_synth_1, design_1_auto_pc_0_synth_1, design_1_auto_rs_0_synth_1, design_1_auto_rs_w_0_synth_1, design_1_auto_ds_1_synth_1, design_1_auto_pc_1_synth_1, design_1_s00_regslice_52_synth_1, design_1_auto_pc_2_synth_1, synth_1...
+Run output will be captured here:
+design_1_rst_ps8_0_99M_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_rst_ps8_0_99M_0_synth_1/runme.log
+design_1_startup_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_startup_0_0_synth_1/runme.log
+design_1_pl_sysref_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_pl_sysref_0_0_synth_1/runme.log
+design_1_uram_play128k_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_uram_play128k_0_0_synth_1/runme.log
+design_1_proc_sys_reset_1_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_proc_sys_reset_1_0_synth_1/runme.log
+design_1_ctrl_snapshot_128k_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_0_synth_1/runme.log
+design_1_ctrl_snapshot_128k_0_2_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_2_synth_1/runme.log
+design_1_ctrl_snapshot_128k_0_3_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_3_synth_1/runme.log
+design_1_ctrl_snapshot_128k_0_4_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_4_synth_1/runme.log
+design_1_ctrl_snapshot_128k_0_5_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_5_synth_1/runme.log
+design_1_ctrl_snapshot_128k_0_6_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_6_synth_1/runme.log
+design_1_ctrl_snapshot_128k_0_7_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_7_synth_1/runme.log
+design_1_ctrl_snapshot_128k_0_8_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_ctrl_snapshot_128k_0_8_synth_1/runme.log
+design_1_usp_rf_data_converter_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_usp_rf_data_converter_0_0_synth_1/runme.log
+design_1_zynq_ultra_ps_e_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
+design_1_vio_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_vio_0_0_synth_1/runme.log
+design_1_axi_bram_ctrl_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_0_synth_1/runme.log
+design_1_blk_mem_gen_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_0_0_synth_1/runme.log
+design_1_axi_bram_ctrl_1_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_1_0_synth_1/runme.log
+design_1_axi_gpio_1_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_gpio_1_0_synth_1/runme.log
+design_1_blk_mem_gen_0_1_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_0_1_synth_1/runme.log
+design_1_axis_register_slice_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_register_slice_0_0_synth_1/runme.log
+design_1_axis_broadcaster_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_broadcaster_0_0_synth_1/runme.log
+design_1_axis_dwidth_converter_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_0_0_synth_1/runme.log
+design_1_axis_dwidth_converter_1_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_0_synth_1/runme.log
+design_1_axi_gpio_0_1_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_gpio_0_1_synth_1/runme.log
+design_1_axis_clock_converter_0_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_0_synth_1/runme.log
+design_1_blk_mem_gen_1_1_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_1_synth_1/runme.log
+design_1_axis_dwidth_converter_1_1_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_1_synth_1/runme.log
+design_1_axi_bram_ctrl_0_2_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_2_synth_1/runme.log
+design_1_axis_clock_converter_0_1_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_1_synth_1/runme.log
+design_1_blk_mem_gen_1_2_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_2_synth_1/runme.log
+design_1_axis_dwidth_converter_1_2_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_2_synth_1/runme.log
+design_1_axi_bram_ctrl_0_3_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_3_synth_1/runme.log
+design_1_axis_clock_converter_0_2_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_2_synth_1/runme.log
+design_1_blk_mem_gen_1_3_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_3_synth_1/runme.log
+design_1_axis_dwidth_converter_1_3_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_3_synth_1/runme.log
+design_1_axi_bram_ctrl_0_4_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_4_synth_1/runme.log
+design_1_axis_clock_converter_0_3_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_3_synth_1/runme.log
+design_1_blk_mem_gen_1_4_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_4_synth_1/runme.log
+design_1_axis_dwidth_converter_1_4_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_4_synth_1/runme.log
+design_1_axi_bram_ctrl_0_5_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_5_synth_1/runme.log
+design_1_axis_clock_converter_0_4_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_4_synth_1/runme.log
+design_1_blk_mem_gen_1_5_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_5_synth_1/runme.log
+design_1_axis_dwidth_converter_1_5_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_5_synth_1/runme.log
+design_1_axi_bram_ctrl_0_6_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_6_synth_1/runme.log
+design_1_axis_clock_converter_0_5_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_5_synth_1/runme.log
+design_1_blk_mem_gen_1_6_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_6_synth_1/runme.log
+design_1_axis_dwidth_converter_1_6_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_6_synth_1/runme.log
+design_1_axi_bram_ctrl_0_7_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_7_synth_1/runme.log
+design_1_axis_clock_converter_0_6_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_6_synth_1/runme.log
+design_1_blk_mem_gen_1_7_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_blk_mem_gen_1_7_synth_1/runme.log
+design_1_axis_dwidth_converter_1_7_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_dwidth_converter_1_7_synth_1/runme.log
+design_1_axi_bram_ctrl_0_8_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axi_bram_ctrl_0_8_synth_1/runme.log
+design_1_axis_clock_converter_0_7_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_7_synth_1/runme.log
+design_1_axis_clock_converter_0_8_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_axis_clock_converter_0_8_synth_1/runme.log
+design_1_system_ila_2_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_system_ila_2_0_synth_1/runme.log
+design_1_system_ila_1_2_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_system_ila_1_2_synth_1/runme.log
+design_1_clk_wiz_0_1_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_clk_wiz_0_1_synth_1/runme.log
+design_1_xbar_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_xbar_0_synth_1/runme.log
+design_1_s00_regslice_51_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_s00_regslice_51_synth_1/runme.log
+design_1_auto_us_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_us_0_synth_1/runme.log
+design_1_auto_rs_w_1_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_rs_w_1_synth_1/runme.log
+design_1_m00_regslice_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_m00_regslice_0_synth_1/runme.log
+design_1_m01_regslice_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_m01_regslice_0_synth_1/runme.log
+design_1_auto_ds_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_ds_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_pc_0_synth_1/runme.log
+design_1_auto_rs_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_rs_0_synth_1/runme.log
+design_1_auto_rs_w_0_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_rs_w_0_synth_1/runme.log
+design_1_auto_ds_1_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_ds_1_synth_1/runme.log
+design_1_auto_pc_1_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_pc_1_synth_1/runme.log
+design_1_s00_regslice_52_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_s00_regslice_52_synth_1/runme.log
+design_1_auto_pc_2_synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/design_1_auto_pc_2_synth_1/runme.log
+synth_1: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/synth_1/runme.log
+[Sun Sep 21 13:01:45 2025] Launched impl_1...
+Run output will be captured here: /home/wisig/Videos/MTS/RFSoC-MTS/mts/mts.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:29 ; elapsed = 00:00:22 . Memory (MB): peak = 8387.430 ; gain = 0.000 ; free physical = 39899 ; free virtual = 109475
+write_hw_platform -fixed -force  -include_bit -file /home/wisig/Videos/MTS/RFSoC-MTS/mts/design_1_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: /home/wisig/Videos/MTS/RFSoC-MTS/mts/design_1_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (/home/wisig/xilinx_19_2/Vivado/2019.2/data/embeddedsw) loading 63 seconds
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/wisig/Videos/MTS/RFSoC-MTS/mts/design_1_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:17 ; elapsed = 00:01:43 . Memory (MB): peak = 8988.000 ; gain = 0.000 ; free physical = 554 ; free virtual = 111995
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.

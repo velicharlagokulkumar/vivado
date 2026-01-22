@@ -1,15 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-//Make sure parameter and interface_parameter bram_size_bytes matches mem_size
-//Make sure parameter and interface_parameter BRAM_CPU_DWIDTH matches MEM_WIDTH
-
-//           parameter MEM_SIZE_BYTES = 32768
 
 module uram_play128k #(
            parameter DWIDTH = 256,

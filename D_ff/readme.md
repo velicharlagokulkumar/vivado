@@ -44,6 +44,12 @@ At any of those time output of flop "d_ff" does not changes it remains same as w
 So let
 Q(30 ns) = D which is sampled at 25 ns
 
+#### set
+<img width="1163" height="276" alt="image" src="https://github.com/user-attachments/assets/9ccb1d03-8082-4d0e-9e11-a04b511e3758" />
+
+<img width="1550" height="232" alt="image" src="https://github.com/user-attachments/assets/3593b04b-c60d-48bd-ab43-7480c552cd59" />
+
+
 
 
 

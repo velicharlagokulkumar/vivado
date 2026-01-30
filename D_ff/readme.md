@@ -44,7 +44,7 @@ At any of those time output of flop "d_ff" does not changes it remains same as w
 So let
 Q(30 ns) = D which is sampled at 25 ns
 
-#### set
+#### Asynchronous Set & Asynchronous Reset
 
 One additional note should be made here with regards to modeling asynchronous resets in Verilog. The simulation
 model of a flip-flop that includes both an asynchronous set and an asynchronous reset in Verilog might not simulate
@@ -67,6 +67,10 @@ asynchronous set and asynchronous reset
 <img width="1113" height="233" alt="image" src="https://github.com/user-attachments/assets/527f4ce2-db88-4845-b6a5-84e06e553d85" />
 
 <img width="1111" height="230" alt="image" src="https://github.com/user-attachments/assets/47ffcf75-5f8d-48b9-b4ee-101ab5d789d3" />
+
+#### Synthesized Netlist
+<img width="646" height="322" alt="image" src="https://github.com/user-attachments/assets/95b008fd-5d1a-4e8d-af3a-ba6d71a720d4" />
+
 
 
 

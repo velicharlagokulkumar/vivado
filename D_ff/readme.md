@@ -45,9 +45,29 @@ So let
 Q(30 ns) = D which is sampled at 25 ns
 
 #### set
-<img width="1163" height="276" alt="image" src="https://github.com/user-attachments/assets/9ccb1d03-8082-4d0e-9e11-a04b511e3758" />
+```
+One additional note should be made here with regards to modeling asynchronous resets in Verilog. The simulation
+model of a flip-flop that includes both an asynchronous set and an asynchronous reset in Verilog might not simulate
+correctly without a little help from the designer
 
-<img width="1160" height="267" alt="image" src="https://github.com/user-attachments/assets/8c076243-7a51-435c-ae7e-2bb9dc3f60d1" />
+In general, most synchronous designs do not have flop-flops that
+contain both an asynchronous set and asynchronous reset, but on the occasion such a flip-flop is required
+
+First note that the problem is only a simulation problem and not a synthesis problem (synthesis infers the correct flipflop with asynchronous set/reset). The simulation problem is due to the always block that is only entered on the
+active edge of the set, reset or clock signals. If the reset becomes active, followed then by the set going active, then
+if the reset goes inactive, the flip-flop should first go to a reset state, followed by going to a set state. With both these inputs being asynchronous, the set should be active as soon as the reset is removed, but that will not be the case in Verilog since there is no way to trigger the always block until the next rising clock edge.
+
+For those rare designs where reset and set are both permitted to be asserted simultaneously and then reset is removed
+first, the fix to this simulation problem is to model the flip-flop using self-correcting code enclosed within the
+translate_off/translate_on directives and force the output to the correct value for this one condition. The best
+recommendation here is to avoid, as much as possible, the condition that requires a flip-flop that uses both
+asynchronous set and asynchronous reset
+```
+<img width="1113" height="233" alt="image" src="https://github.com/user-attachments/assets/527f4ce2-db88-4845-b6a5-84e06e553d85" />
+
+<img width="1111" height="230" alt="image" src="https://github.com/user-attachments/assets/47ffcf75-5f8d-48b9-b4ee-101ab5d789d3" />
+
+
 
 
 

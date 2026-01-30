@@ -47,7 +47,9 @@ Q(30 ns) = D which is sampled at 25 ns
 #### set
 <img width="1163" height="276" alt="image" src="https://github.com/user-attachments/assets/9ccb1d03-8082-4d0e-9e11-a04b511e3758" />
 
-<img width="1227" height="264" alt="image" src="https://github.com/user-attachments/assets/05deb0c5-7202-4c7f-908e-34b2061e7b95" />
+<img width="1160" height="267" alt="image" src="https://github.com/user-attachments/assets/8c076243-7a51-435c-ae7e-2bb9dc3f60d1" />
+
+
 
 
 

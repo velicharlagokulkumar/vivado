@@ -11,10 +11,10 @@ module d_ff(
 logic [2:0] d_ff_2 ;
     
 always_ff @ (posedge clk or negedge rst_n or negedge set_n) begin
-  if(~rst_n) begin
+  if(!rst_n) begin
     d_ff <= 'd0;
   end 
-  else if(set_n) begin
+  else if(!set_n) begin
     d_ff <= 'b111;
   end
   else begin
@@ -28,10 +28,10 @@ always_ff @ (posedge clk or negedge rst_n or negedge set_n) begin
     
  // synopsys  translate_off
  always @(rst_n or set_n)
- if (rst_n && !set_n)
-  force d_ff = 1;
- else 
- release d_ff;
+    if (rst_n && !set_n)
+        force d_ff ='b111;
+    else 
+        release d_ff;
  // synopsys translate_on
 
 endmodule

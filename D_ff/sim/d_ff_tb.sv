@@ -18,7 +18,7 @@ initial begin
     # 20 rst_n = 1;
       d_in = 'd5;
     # 7 d_in = 'd6;
-    # 1 d_in = 'd7;
+    # 1 d_in = 'd5;
 end
 
 initial begin

@@ -45,7 +45,7 @@ So let
 Q(30 ns) = D which is sampled at 25 ns
 
 #### set
-```
+
 One additional note should be made here with regards to modeling asynchronous resets in Verilog. The simulation
 model of a flip-flop that includes both an asynchronous set and an asynchronous reset in Verilog might not simulate
 correctly without a little help from the designer
@@ -62,10 +62,12 @@ first, the fix to this simulation problem is to model the flip-flop using self-c
 translate_off/translate_on directives and force the output to the correct value for this one condition. The best
 recommendation here is to avoid, as much as possible, the condition that requires a flip-flop that uses both
 asynchronous set and asynchronous reset
-```
+
+
 <img width="1113" height="233" alt="image" src="https://github.com/user-attachments/assets/527f4ce2-db88-4845-b6a5-84e06e553d85" />
 
 <img width="1111" height="230" alt="image" src="https://github.com/user-attachments/assets/47ffcf75-5f8d-48b9-b4ee-101ab5d789d3" />
+
 
 
 
